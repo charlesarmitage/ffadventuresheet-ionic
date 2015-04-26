@@ -28,3 +28,11 @@
 - gulp -r android
 
 (You may need to install cordova android platform. Use: cordova platform add android)
+
+## Missing dependencies ##
+
+If you are failing to run gulp with module failures - perhaps after cleaning the git repository:
+	bower install
+	npm install
+
+To re-install the bower and npm dependencies for the project
