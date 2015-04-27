@@ -10,6 +10,11 @@ angular.module('FantasyAdventureSheet')
   .controller('HomeController', function($scope, ExampleService) {
 
     $scope.myHTML = null;
+    $scope.statistics = [
+      { name: 'Skill' },
+      { name: 'Stamina' },
+      { name: 'Luck' }
+    ];
 
     // just an example...
     $scope.fetchRandomText = function() {

@@ -62,3 +62,47 @@ To re-install the bower and npm dependencies for the project
       'app/scripts/**/*.js',
       'tests/*.js'
     ],
+
+
+## Testing Angular ##
+Following (loosely instructions here: https://docs.angularjs.org/guide/unit-testing)
+
+### Install angular-mocks ###
+
+- bower install angular-mocks --save-dev
+- Add 'bower_components/angular-mocks/angular-mocks.js' to karma.conf.js
+
+- Add: 
+```
+beforeEach(module('FantasyAdventureSheet')); // to test file to load Angular module
+```
+ - Add controller loading;
+
+ ```
+ 	var $scope,
+		$controller;
+
+	beforeEach(inject(function(_$controller_){
+
+	   $scope = {};
+	   function buildController(){
+	   		return _$controller_('HomeController', { $scope: $scope });
+	   };
+
+	   $controller = buildController();
+	}));
+```
+
+- Add dependencies to karma.conf.js:
+
+```
+'bower_components/angular/angular.js',
+      'bower_components/angular-mocks/angular-mocks.js',
+      'bower_components/angular-animate/angular-animate.js',
+      'bower_components/angular-sanitize/angular-sanitize.js',
+      'bower_components/angular-resource/angular-resource.js',
+      'bower_components/angular-ui-router/release/angular-ui-router.js',
+      'bower_components/ngCordova/dist/ng-cordova.js',
+      'bower_components/ionic/js/ionic.js',
+      'bower_components/ionic/js/ionic-angular.js',
+```
