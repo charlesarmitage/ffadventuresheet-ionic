@@ -32,5 +32,19 @@ describe("Statistics Controller", function() {
 	  	expect($scope.statistics[1].name).toEqual('Stamina');
 	  	expect($scope.statistics[2].name).toEqual('Luck');
 	  });
+
+	  it('has zero initial value for each statistic', function(){
+		
+		expect($scope.statistics[0].initialValue).toEqual(0);
+	  	expect($scope.statistics[1].initialValue).toEqual(0);
+	  	expect($scope.statistics[2].initialValue).toEqual(0);
+	  });
+
+	  it('has zero current value for each statistic', function(){
+		
+		expect($scope.statistics[0].currentValue).toEqual(0);
+	  	expect($scope.statistics[1].currentValue).toEqual(0);
+	  	expect($scope.statistics[2].currentValue).toEqual(0);
+	  });
 	});
 });

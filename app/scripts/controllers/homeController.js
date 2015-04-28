@@ -9,11 +9,17 @@
 angular.module('FantasyAdventureSheet')
   .controller('HomeController', function($scope, ExampleService) {
 
+    function Statistic(name) {
+      this.name = name;
+      this.initialValue = 0;
+      this.currentValue = 0;
+    }
+
     $scope.myHTML = null;
     $scope.statistics = [
-      { name: 'Skill' },
-      { name: 'Stamina' },
-      { name: 'Luck' }
+      new Statistic('Skill'),
+      new Statistic('Stamina'),
+      new Statistic('Luck'),
     ];
 
     // just an example...

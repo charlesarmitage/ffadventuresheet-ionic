@@ -5,7 +5,13 @@
     </ion-header-bar>
 
     <ion-content>
-        Yet more statistics
+                
+        <ion-list>
+            <ion-item ng-repeat="statistic in statistics">
+                {{statistic.name}}  {{statistic.currentValue}} / {{statistic.initialValue}}
+            </ion-item>
+        </ion-list>
+
         <ion-refresher
             pulling-text="Pull to refresh..."
             on-refresh="fetchRandomText()">
