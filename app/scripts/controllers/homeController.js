@@ -15,7 +15,6 @@ angular.module('FantasyAdventureSheet')
       this.currentValue = 0;
     }
 
-    $scope.myHTML = null;
     $scope.statistics = [
       new Statistic('Skill'),
       new Statistic('Stamina'),
@@ -23,7 +22,8 @@ angular.module('FantasyAdventureSheet')
     ];
 
     // just an example...
-    $scope.fetchRandomText = function() {
+    //$scope.myHTML = null;
+    /*$scope.fetchRandomText = function() {
       ExampleService.doSomethingAsync()
         .then(ExampleService.fetchSomethingFromServer)
         .then(function(response) {
@@ -31,7 +31,7 @@ angular.module('FantasyAdventureSheet')
             // close pull to refresh loader
             $scope.$broadcast('scroll.refreshComplete');
         });
-    };
+    };*/
 
     //$scope.fetchRandomText();
 

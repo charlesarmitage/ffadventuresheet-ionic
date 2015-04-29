@@ -106,3 +106,22 @@ beforeEach(module('FantasyAdventureSheet')); // to test file to load Angular mod
       'bower_components/ionic/js/ionic.js',
       'bower_components/ionic/js/ionic-angular.js',
 ```
+
+## Protractor End to End Testing ##
+- Install protractor: npm install -g protractor
+- Update protractor components:
+`webdriver-manager update`
+- Start Selenium Server:
+`webdriver-manager start`
+
+### Add tests and configuration ###
+- Add conf.js to tests/e2e (end to end). This contains the test configuration
+- Add spec.js to tests/e2e. This contains a Jasmine spec with Protractor objects
+available for testing the page.
+
+### Run Protractor tests ###
+`protractor conf.js`
+
+### Protractor API and tutorial ###
+- http://angular.github.io/protractor/#/tutorial
+- http://angular.github.io/protractor/#/api
