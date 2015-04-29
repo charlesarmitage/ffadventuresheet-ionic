@@ -33,6 +33,6 @@ angular.module('FantasyAdventureSheet')
         });
     };
 
-    $scope.fetchRandomText();
+    //$scope.fetchRandomText();
 
   });
