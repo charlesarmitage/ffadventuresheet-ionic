@@ -107,6 +107,39 @@ beforeEach(module('FantasyAdventureSheet')); // to test file to load Angular mod
       'bower_components/ionic/js/ionic-angular.js',
 ```
 
+## Add karma testing to gulp ##
+
+- Install gulp-karma:
+`npm install gulp-karma --save-dev`
+
+- Add gulp-karma to gulpfile.js (see: https://www.npmjs.com/package/gulp-karma)
+
+`var karma = require('gulp-karma');`
+
+```
+gulp.task('test', function() {
+  return gulp.src('./nonexistentfile')
+    .pipe(karma({
+      configFile: 'karma.conf.js',
+      action: 'run'
+    }))
+    .on('error', function(err) {
+      throw err;
+    });
+});
+ 
+gulp.task('karma-watch', function() {
+  gulp.src('./nonexistentfile')
+    .pipe(karma({
+      configFile: 'karma.conf.js',
+      action: 'watch'
+    }));
+});
+```
+
+Pass non-existent file to force gulp karma to read karma.conf.js properly
+See: http://stackoverflow.com/questions/22413767/angular-testing-with-karma-module-is-not-defined  & https://github.com/lazd/gulp-karma/issues/9
+
 ## Protractor End to End Testing ##
 - Install protractor: npm install -g protractor
 - Update protractor components:

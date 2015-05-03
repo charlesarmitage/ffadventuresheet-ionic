@@ -8,20 +8,21 @@
                 
         <ion-list type="card">
             <ion-item ng-repeat="statistic in statistics">
-                {{statistic.name}}  {{statistic.currentValue}} / {{statistic.initialValue}}
+                <h2>{{statistic.name}}</h2>
+                <h3>Current:  {{statistic.currentValue}}
+                    <button class="button button-small icon ion-plus pull-right">
+                    </button>
+                    <button class="button button-small icon ion-minus pull-right">
+                    </button>
+                </h3>
+                <h3>Initial: {{statistic.initialValue}}
+                    <button class="button button-small icon ion-plus">
+                    </button>
+                    <button class="button button-small icon ion-minus">
+                    </button>
+                </h3>
             </ion-item>
         </ion-list>
-        <!--
-        <ion-refresher
-            pulling-text="Pull to refresh..."
-            on-refresh="fetchRandomText()">
-        </ion-refresher>
-        <div class="loader" ng-if="!myHTML">
-            <ion-spinner></ion-spinner>
-        </div>
-        <div class="content" ng-bind-html="myHTML">
-        </div>
-        -->
     </ion-content>
 
 </ion-view>

@@ -15,9 +15,15 @@ describe('Fantasy Adventure Sheet', function() {
 
   it('should have "skill", "stamina" & "luck" statistics', function() {
     // Expect statistics to be in correct order
-    expect(statistics.get(0).getText()).toEqual('Skill 0 / 0');
-    expect(statistics.get(1).getText()).toEqual('Stamina 0 / 0');
-    expect(statistics.get(2).getText()).toEqual('Luck 0 / 0');
+    expect(statistics.get(0).getText()).toEqual('Skill\n'
+                                              + 'Current: 0\n'
+                                              + 'Initial: 0');
+    expect(statistics.get(1).getText()).toEqual('Stamina\n'
+                                              + 'Current: 0\n'
+                                              + 'Initial: 0');
+    expect(statistics.get(2).getText()).toEqual('Luck\n'
+                                              + 'Current: 0\n'
+                                              + 'Initial: 0');
   });
 
 });
